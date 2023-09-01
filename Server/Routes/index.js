@@ -12,11 +12,11 @@ const mainRouter = Router();
 
 //routas
 mainRouter.get('/character/:id', getCharById)
-
+/* 
 mainRouter.post('/fav', postFav)
 mainRouter.post('/login', login)
 mainRouter.post('/signUp', postUser)
 
-mainRouter.delete('/fav/:id', deleteFav)
+mainRouter.delete('/fav/:id', deleteFav) */
 
 module.exports= mainRouter;
