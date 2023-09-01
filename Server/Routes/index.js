@@ -1,0 +1,22 @@
+const {Router} = require('express');
+
+// importar fn handlers
+const getCharById = require('../Handlers/getCharById');
+const login = require('../Handlers/login');
+const postFav = require('../Handlers/postFav');
+const deleteFav = require('../Handlers/deleteFav');
+const postUser = require('../Handlers/postUser');
+
+
+const mainRouter = Router();
+
+//routas
+mainRouter.get('/character/:id', getCharById)
+
+mainRouter.post('/fav', postFav)
+mainRouter.post('/login', login)
+mainRouter.post('/signUp', postUser)
+
+mainRouter.delete('/fav/:id', deleteFav)
+
+module.exports= mainRouter;
