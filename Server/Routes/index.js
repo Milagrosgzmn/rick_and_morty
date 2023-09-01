@@ -14,10 +14,10 @@ const mainRouter = Router();
 mainRouter.get('/character/:id', getCharById)
 
 mainRouter.post('/signup', postUser)
+mainRouter.post('/login', login)
 
 /* 
 mainRouter.post('/fav', postFav)
-mainRouter.post('/login', login)
 
 mainRouter.delete('/fav/:id', deleteFav) */
 
