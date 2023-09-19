@@ -15,8 +15,12 @@ mainRouter.get('/character/:id', getCharById)
 
 mainRouter.post('/signup', postUser)
 mainRouter.post('/login', login)
-mainRouter.post('/fav', postFav)
 
 mainRouter.delete('/fav/:id', deleteFav)
+/* 
+mainRouter.post('/fav', postFav)
+
+ */
+
 
 module.exports= mainRouter;
