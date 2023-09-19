@@ -5,6 +5,7 @@ const deleteFavorite = async (id)=>{
         await Favorites.destroy({where: {id: id}});
         const favorites = await Favorites.findAll();
         return favorites;
+
     } catch (error) {   
         return false;
     }
