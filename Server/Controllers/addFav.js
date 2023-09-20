@@ -1,6 +1,5 @@
 const {Favorites} = require('../DB_connection');
 const {Users} = require('../DB_connection');
-const User = require('../models/User');
 
 const addFav = async (req)=>{
 
@@ -11,11 +10,13 @@ const addFav = async (req)=>{
 
     try {
         const fav = await Favorites.create({name, id, origin: origin?.name, status, image, species, gender});
-        const  allFavs= await Favorites.findAll();
         const user = await Users.findByPk(userId)
         
-        await user.addFavorites(fav.id)
+        await user.addFavorites(fav.id);
 
+        const  allFavs= await user.getFavorites({
+            attributes: ['id', 'name', 'status', 'species', 'gender', 'image', 'origin'],
+        });
         return allFavs;
     
     } catch (error) {
