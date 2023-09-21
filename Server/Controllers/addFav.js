@@ -9,14 +9,19 @@ const addFav = async (req)=>{
         }
 
     try {
-        const fav = await Favorites.create({name, id, origin: origin?.name, status, image, species, gender});
+        const fav = await Favorites.create({
+            name,
+            id,
+            origin,
+            status,
+            image,
+            species,
+            gender});
         const user = await Users.findByPk(userId)
         
         await user.addFavorites(fav.id);
 
-        const  allFavs= await user.getFavorites({
-            attributes: ['id', 'name', 'status', 'species', 'gender', 'image', 'origin'],
-        });
+        const  allFavs= await Favorites.findAll();
         return allFavs;
     
     } catch (error) {

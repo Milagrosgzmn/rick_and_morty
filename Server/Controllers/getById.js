@@ -11,7 +11,7 @@ const getById = async (id)=>{
                 id: data.id,
                 status: data.status,
                 name: data.name,
-                species: data.specie,
+                species: data.species,
                 origin: data.origin?.name,
                 image: data.image,
                 gender: data.gender,

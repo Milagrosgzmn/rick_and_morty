@@ -26,6 +26,7 @@ const getUser = async (email, password)=>{
             return false;
         }
     } catch (error) {
+        console.error(error.message);
         return false;
     }
 }

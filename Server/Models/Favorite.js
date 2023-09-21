@@ -17,6 +17,7 @@ module.exports = (sequelize) => {
       },
       species:{
          type: DataTypes.STRING,
+         default:'unknown',
          allowNull: false,
       },
       gender:{
@@ -29,6 +30,7 @@ module.exports = (sequelize) => {
       },
       origin:{
          type: DataTypes.STRING,
+         defaultValue:'unknown',
          allowNull: false,
       }
    }, { timestamps: false });
