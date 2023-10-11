@@ -7,8 +7,7 @@ const deleteFav = async(req, res)=>{
     const userId =id[1];
     
     try {
-        const remainingFavs = deleteFavorite(favId, userId);
-    
+        const remainingFavs = await deleteFavorite(favId, userId);
         return remainingFavs ? res.status(200).json(remainingFavs) : res.status(400).json('Error deleting favorite.');
 
     } catch (error) {
