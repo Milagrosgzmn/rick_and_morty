@@ -34,19 +34,19 @@ export default  function Favorites(){
     }
 
     return (
-        <div >
-            <select onChange={handleOrder} name="" id="">
+        <div className="mt-4">
+            <select className="p-2 bg-slate-900 rounded-md mt-2 mx-2" onChange={handleOrder} name="" id="">
                 <option value="A">Ascendente</option>
                 <option value="D">Descendente</option>
             </select>
 
-            <select onChange={handlerFilter} name="" id="">
+            <select className="p-2 bg-slate-900 rounded-md mt-2 mx-2" onChange={handlerFilter} name="" id="">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Genderless">Genderless</option>
                 <option value="unknown">unknown</option>
             </select>
-            <button onClick={handleReset} > Reset Filters</button>
+            <button className="p-2 bg-slate-900 rounded-md mt-2 mx-2" onClick={handleReset} > Reset Filters</button>
             
             <div className={style.cardsList}>
                 {favorites?.map(favorite =>(
