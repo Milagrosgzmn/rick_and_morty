@@ -3,6 +3,7 @@ import { useState } from "react";
 import validation from '../Form/validation';
 import axios from 'axios';
 import Swal from "sweetalert2";
+import '../Form/formStyle.css';
 
 export default function SignUp (){
     // eslint-disable-next-line no-unused-vars
@@ -48,7 +49,7 @@ export default function SignUp (){
     }
 
     return (
-        <section className="flex flex-col w-full justify-center items-center">
+        <section id='formL' className="flex flex-col w-full justify-center items-center">
             <h2 className="text-3xl text-center">Regístrese</h2>
             <form onSubmit={submitHandler}
             className="flex flex-col w-96 bg-gray-800 bg-opacity-90 p-6 m-4 rounded-xl">

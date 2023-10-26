@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+    #formL form{
+        display: flex;
+        flex-shrink: 1;
+        flex-direction: column;
+        width: 80%;
+        background-color: rgba(64, 64, 64, 0.9);
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: 20px;
+    }
+}
