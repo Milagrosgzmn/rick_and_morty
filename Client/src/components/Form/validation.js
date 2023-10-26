@@ -1,5 +1,4 @@
-
-
+/* eslint-disable no-useless-escape */
 export default function validation (input){
     let errors = {};
     if (!input.email){
