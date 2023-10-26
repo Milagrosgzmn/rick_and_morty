@@ -3,8 +3,9 @@ import Error from './views/error/Error';
 import About from './views/about/About';
 import Detail from './views/details/Detail';
 import NavBar from './components/NavBar/NavBar';
-import Form from './components/Form/Form';
 import Favorites from './views/Favorites/favorites';
+import Register from './views/register/register';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { setFavs } from './redux/actions/favoritesActions';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -13,6 +14,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getCharacter, addRandom, deleteCharacter } from './redux/actions/characterActions';
 import { setUser } from './redux/actions/userActions';
+
 
 function App() {
    const {allCharacters} = useSelector(state=>state.characters);
@@ -82,7 +84,7 @@ function App() {
          
          <Routes>
             <Route path='/favorites' element={<Favorites/>} />
-            <Route path='/' element= {<Form login={login} />}/>
+            <Route path='/' element= {<Register login={login} />}/>
             <Route path='/home' element= {<Home onClose={closeCard}/>}/>
             <Route path='/detail/:id' element= {<Detail/>}/>
             <Route path='/about' element= {<About/>}/>
