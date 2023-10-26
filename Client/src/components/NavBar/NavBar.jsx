@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function NavBar({onSearch, addingRandom}){
     return (
-        <header className='w-screen flex flex-col '>
+        <header className='w-full flex flex-col '>
             <nav className=" pl-4 w-full flex items-center  bg-bgblue h-16">
                 <Link className='px-4 font-semibold hover:text-mygreen' to='/home'>
                     <img src="" alt="" />
