@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
-
+import './style.css';
 
 export default function Detail (){
 
@@ -21,31 +21,31 @@ export default function Detail (){
      }, [id]);
 
     return (
-        <section>
-            <article>
-                <div>
-                    <h1>{character.name}</h1>
-                    <div>
-                        <h3>STATUS</h3>
+        <section className="w-11/12 flex justify-center m-auto">
+            <article id='detail' className="w-full flex items-center justify-center m-16">
+                <div className="w-2/5">
+                    <h1 className="font-semibold text-xl text-mygreen">{character.name}</h1>
+                    <div className="field">
+                        <h3>STATUS: </h3>
                         <p>{character.status}</p>
                     </div>
-                    <div>
-                        <h3>SPECIES</h3>
+                    <div className="field">
+                        <h3>SPECIES: </h3>
                         <p>{character.species}</p>
                     </div>
-                    <div>
-                        <h3>GENDER</h3>
+                    <div className="field">
+                        <h3>GENDER: </h3>
                         <p>{character.gender}</p>
                     </div>
-                    <div>
-                        <h3>ORIGIN</h3>
+                    <div className="field">
+                        <h3>ORIGIN: </h3>
                         <p>{character.origin}</p>
                     </div>
 
 
                 </div>
                 <div>
-                    <img src={character?.image} alt={character.name} />
+                    <img className="rounded-xl" src={character?.image} alt={character.name} />
                 </div>
             </article>
         </section>

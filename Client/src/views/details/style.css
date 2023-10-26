@@ -1,0 +1,34 @@
+#detail{
+    background-color: rgba(27, 28, 59, 0.922);
+    border-radius: 20px;
+    padding: 1em;
+}
+#detail div h1{
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #eaeaea;
+}
+.field{
+    display: flex;
+}
+.field h3{
+    font-weight: 800;
+    padding-right: 0.5em;
+    color: #01d020;
+}
+.field p{
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .field{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 376px) {
+    .field{
+       margin-right: 0.5em;
+    }
+}
