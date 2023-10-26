@@ -50,15 +50,15 @@ export default function Card(props) {
    
 
    return (
-      <article>
-         {closeBtn && (<button className={style.botonCerrar} onClick={()=>(onClose(id))}>X</button>)}
+      <article className='bg-bgblue bg-opacity-80 p-2 rounded-md flex flex-col justify-center'>
+         <div className='flex justify-center items-center'>{closeBtn && (<button className={style.botonCerrar} onClick={()=>(onClose(id))}>X</button>)}
          {
             fav ? (
                <button onClick={handleFavorite}>❤️</button>
             ) : (
                <button onClick={handleFavorite}>🤍</button>
             )
-         }
+         }</div>
          <Link to={`/detail/${character.id}`}>
          <div className = {style.card}>
             <img src={character.image} alt={character.name} />
