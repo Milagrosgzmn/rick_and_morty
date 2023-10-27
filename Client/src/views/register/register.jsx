@@ -19,12 +19,12 @@ export default function Register ({login}){
         {isRegistered && 
         <div className="flex flex-col items-center">
             <Form login={login}/>
-            <p onClick={handleRegister} className=" black underline">¿No está registrado? Regístrese aquí</p>
+            <p onClick={handleRegister} className=" text-bold underline">¿No está registrado? Regístrese aquí</p>
         </div>}
         {!isRegistered && 
         <div className="flex flex-col items-center">
             <SignUp/> 
-            <p onClick={handleLogin} className=" black underline">¿Ya tiene una cuenta? Inicie Sesion</p>
+            <p onClick={handleLogin} className=" text-bold  underline">¿Ya tiene una cuenta? Inicie Sesion</p>
         </div>}
     </main>
     );
