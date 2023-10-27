@@ -5,6 +5,7 @@ import Detail from './views/details/Detail';
 import NavBar from './components/NavBar/NavBar';
 import Favorites from './views/Favorites/favorites';
 import Register from './views/register/register';
+import Swal from "sweetalert2";
 
 import { useDispatch, useSelector } from 'react-redux';
 import { setFavs } from './redux/actions/favoritesActions';
@@ -14,7 +15,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getCharacter, addRandom, deleteCharacter } from './redux/actions/characterActions';
 import { setUser } from './redux/actions/userActions';
-
 
 function App() {
    const {allCharacters} = useSelector(state=>state.characters);
@@ -28,7 +28,7 @@ function App() {
    async function searchHandler(id) {
       dispatch(getCharacter(id));
    }
-
+   
    async function addingRandom(){
       let loTengo =[];
       let random= Math.floor(Math.random()*826);
@@ -45,7 +45,12 @@ function App() {
             }
          }
       } catch (error) {
-         throw new Error(error.message);
+         console.error(error.message);
+         Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hubo un error al agregar el personaje.',
+          })
       }
    }
    function closeCard (id){
@@ -68,6 +73,11 @@ function App() {
          
       } catch (error) {
          console.error(error.message);
+         Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hubo un error al iniciar sesión.',
+          })
       }
    }
    
@@ -76,7 +86,7 @@ function App() {
    useEffect(() => {
       !access && navigate('/');
       access && navigate('/home');
-   }, [access]);
+   }, [access, navigate]);
 
    return (
      <div>
