@@ -56,7 +56,7 @@ export default function Form ({login}){
             </div>
             <div className=" flex justify-center">
                 <button 
-            className="bg-green-500 w-1/3 my-4 "
+            className="bg-mygreen p-2 rounded-full w-1/3 my-4 "
             onClick={submitHandler} type="submit">ENVIAR</button>
             </div>
             

@@ -50,7 +50,7 @@ export default function SignUp (){
 
     return (
         <section id='formL' className="flex flex-col w-full justify-center items-center">
-            <h2 className="text-3xl text-center">Regístrese</h2>
+        <h2 className="text-3xl text-center py-4">Regístrese</h2>
             <form onSubmit={submitHandler}
             className="flex flex-col w-96 bg-gray-800 bg-opacity-90 p-6 m-4 rounded-xl">
             <label className="font-semibold  text-white text-xl" >Email</label>
@@ -76,7 +76,7 @@ export default function SignUp (){
 
             <div className=" flex justify-center">
                 <button 
-            className="bg-green-500 w-1/3 my-4 "
+            className="bg-mygreen p-2 rounded-full w-1/3 my-4"
             onClick={submitHandler} type="submit">ENVIAR</button>
             </div>
             
