@@ -24,7 +24,7 @@ export default function Card(props) {
       if (!onClose) {
         setCloseBtn(false);
       }
-    }, []);
+    }, [onClose]);
  
 
    function handleFavorite(){
@@ -44,21 +44,22 @@ export default function Card(props) {
             setIsFav(true);
          }
       });
-   }, [favorites]);
+   }, [favorites, id]);
 
    
    
 
    return (
-      <article>
-         {closeBtn && (<button className={style.botonCerrar} onClick={()=>(onClose(id))}>X</button>)}
+      <article >
+         <div className='flex justify-center items-center pb-2 '>{closeBtn && (<button className={style.botonCerrar} onClick={()=>(onClose(id))}>X</button>)}
          {
             fav ? (
-               <button onClick={handleFavorite}>❤️</button>
+               <button className='hover:bg-white
+               rounded-full' onClick={handleFavorite}>❤️</button>
             ) : (
-               <button onClick={handleFavorite}>🤍</button>
+               <button className='hover:bg-red-700 rounded-full' onClick={handleFavorite}>🤍</button>
             )
-         }
+         }</div>
          <Link to={`/detail/${character.id}`}>
          <div className = {style.card}>
             <img src={character.image} alt={character.name} />

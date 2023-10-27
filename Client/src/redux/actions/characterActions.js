@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import {getCharById, addRandm, deleteChar} from '../slices/characterSlice';
 
@@ -10,6 +11,11 @@ export const getCharacter = (id)=>{
         dispatch(getCharById(data));
        } catch (error) {
           console.error(error.message);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hubo un error al agregar el personaje.',
+          })
        }
     } 
 };
