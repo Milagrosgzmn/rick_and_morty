@@ -1,5 +1,5 @@
 const server = require('./app');
-const PORT= 3001;
+const PORT= process.env.BC_PORT || 3001;
 const {conn} = require('./DB_connection');
 
 conn.sync({force: false}).then(()=>{

@@ -3,7 +3,7 @@ import axios from 'axios';
 import {filterFavs, orderFavs, deleteFavorite, addFavorite,resetFavs, setFavorites} from '../slices/favoriteSlice';
 
 export const addFav = (character)=>{
-    const endpoint = 'http://localhost:3001/rickandmorty/fav';
+    const endpoint = '/fav';
     return async (dispatch) => {
        try {
         const { data } = await axios.post(endpoint, character);
@@ -14,7 +14,7 @@ export const addFav = (character)=>{
     } 
 };
 export const removeFav = (id,userId) => {
-    const endpoint = `http://localhost:3001/rickandmorty/fav/${id}_${userId}`;
+    const endpoint = `/fav/${id}_${userId}`;
     return async (dispatch) => {
        try {
         const {data} = await axios.delete(endpoint);

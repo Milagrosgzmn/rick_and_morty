@@ -1,6 +1,6 @@
 const express = require('express');
 const server = express();
-const mainRouter = require('./Routes/index');
+const mainRouter = require('./routes/index');
 
  server.use(express.json());
  server.use((req, res, next) => {

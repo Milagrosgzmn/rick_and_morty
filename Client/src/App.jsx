@@ -16,6 +16,10 @@ import axios from 'axios';
 import { getCharacter, addRandom, deleteCharacter } from './redux/actions/characterActions';
 import { setUser } from './redux/actions/userActions';
 
+const apiBackUrl = import.meta.env.VITE_API_BACK_URL;
+const urlApi = `${apiBackUrl}/rickandmorty`|| 'http://localhost:3001/rickandmorty';
+axios.defaults.baseURL = urlApi;
+
 function App() {
    const {allCharacters} = useSelector(state=>state.characters);
    const [access, setAccess] = useState(false);
@@ -36,7 +40,7 @@ function App() {
       try {
          if(!loTengo.includes(random)){
             loTengo.push(random);
-            const {data} = await axios(`http://localhost:3001/rickandmorty/character/${random}`);
+            const {data} = await axios(`/character/${random}`);
             if (data.name) {
                if(!allCharacters.includes(data))
                  dispatch(addRandom(data));
@@ -59,7 +63,7 @@ function App() {
    async function login(userData) {
       try {
          const { email, password } = userData;
-         const URL = 'http://localhost:3001/rickandmorty/login';
+         const URL = '/login';
 
          const {data} = await axios.post(URL,{
             email,
