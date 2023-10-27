@@ -5,7 +5,7 @@ const getCharById = require('../handlers/getCharById');
 const login = require('../handlers/login');
 const postFav = require('../handlers/postFav');
 const deleteFav = require('../handlers/deleteFav');
-const postUser = require('../Handlers/postUser');
+const postUser = require('../handlers/postUser');
 
 
 const mainRouter = Router();
