@@ -9,7 +9,7 @@ This project uses the [Rick and Morty API](https://rickandmortyapi.com/) to retr
 
 - **User Accounts**: Implement user account creation and login functionality to provide a personalized experience.
 
-![imagenes del proyecto](https://luckless-02.imgbb.com/)
+![imagenes del proyecto](https://i.ibb.co/txc8tHV/Captura-de-pantalla-2023-10-27-162013.png)
 ![imagenes del proyecto](https://ibb.co/MGpM4gF)
 ## Available Scripts
 
