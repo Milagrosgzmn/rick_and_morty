@@ -17,7 +17,7 @@ import { getCharacter, addRandom, deleteCharacter } from './redux/actions/charac
 import { setUser } from './redux/actions/userActions';
 
 const apiBackUrl = import.meta.env.VITE_API_BACK_URL;
-const urlApi = `${apiBackUrl}/rickandmorty`|| 'http://localhost:3001/rickandmorty';
+const urlApi = `${apiBackUrl}/rickandmorty`
 axios.defaults.baseURL = urlApi;
 
 function App() {
