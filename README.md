@@ -11,7 +11,6 @@ This project uses the [Rick and Morty API](https://rickandmortyapi.com/) to retr
 
 ![imagenes del proyecto](https://i.ibb.co/txc8tHV/Captura-de-pantalla-2023-10-27-162013.png)
 ![home del proyecto con personajes agregados](https://i.ibb.co/3RrVMjL/Captura-de-pantalla-2023-10-27-161939.png)
-(https://i.ibb.co/3RrVMjL/Captura-de-pantalla-2023-10-27-161939.png)
 ## Available Scripts
 
 In the project directory, you can run:
