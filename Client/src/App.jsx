@@ -81,7 +81,7 @@ function App() {
             icon: 'error',
             title: 'Oops...',
             text: 'Hubo un error al iniciar sesión.',
-          })
+          });
       }
    }
    
@@ -90,7 +90,7 @@ function App() {
    useEffect(() => {
       !access && navigate('/');
       access && navigate('/home');
-   }, [access, navigate]);
+   }, [access]);
 
    return (
      <div>
