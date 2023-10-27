@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import {getCharById, addRandm, deleteChar} from '../slices/characterSlice';
 
 export const getCharacter = (id)=>{
-    const endpoint = `http://localhost:3001/rickandmorty/character/+${id}`;
+    const endpoint = `/character/+${id}`;
     return async (dispatch) => {
        try {
         const { data } = await axios(endpoint);

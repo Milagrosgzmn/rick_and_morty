@@ -27,7 +27,7 @@ export default function SignUp (){
     function submitHandler (e){
         e.preventDefault();
         if(!errors.email && !errors.password){
-            axios.post('http://localhost:3001/rickandmorty/signup',
+            axios.post('/signup',
                 userData).then(({data})=>{
                 if(data){
                     Swal.fire(
