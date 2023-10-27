@@ -19,7 +19,6 @@ export default function Form ({login}){
             ...userData,
             [event.target.name]: `${event.target.value}`
         }));
-        console.log(errors);
     }
     function submitHandler (e){
         e.preventDefault();
