@@ -61,8 +61,10 @@ export default function Card(props) {
             )
          }</div>
          <Link to={`/detail/${character.id}`}>
-         <div className = {style.card}>
+         <div className ={`${style.card} w-56` }  >
+            <div>
             <img src={character.image} alt={character.name} />
+            </div>
             <div className={style.text}>
             <h1>{(character.name).toUpperCase()}</h1>   
             <h2>{character.species}</h2>
