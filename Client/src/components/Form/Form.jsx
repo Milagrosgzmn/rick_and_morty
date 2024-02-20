@@ -2,15 +2,23 @@
 import { useState } from "react";
 import validation from "./validation";
 import './formStyle.css';
+import { useEffect } from "react";
 export default function Form ({login}){
     const [errors, setErrors] = useState({});
     const [userData, setUserData]= useState({
         email:'',
         password:''
     });
+    useEffect(()=>{
+        const predefinedUser = import.meta.env.VITE_USER;
+        const predefinedPassword = import.meta.env.VITE_PASSWORD;
+        setUserData({
+            email:predefinedUser,
+            password: predefinedPassword
+        })
 
-    const predefinedUser = import.meta.env.VITE_USER;
-    const predefinedPassword = import.meta.env.VITE_PASSWORD;
+    },[])
+    
     function handleChange(event){
         setUserData({
             ...userData,
@@ -38,7 +46,7 @@ export default function Form ({login}){
             <label htmlFor="email" className="font-semibold  text-white text-xl" >Email</label>
             <input 
             id="email"
-            value={predefinedUser}
+            value={userData.email}
             className="rounded-2xl px-4 py-1 my-4 text-black"
             placeholder="Ingrese su email" 
             onChange={handleChange}  
@@ -53,7 +61,7 @@ export default function Form ({login}){
             className="rounded-2xl px-4 py-1 my-4 text-black"
             placeholder="Ingrese su constraseña" 
             onChange={handleChange} 
-            value={predefinedPassword}
+            value={userData.password}
             name="password" 
             type="password" required/>
             <div className="h-6 my-1">
