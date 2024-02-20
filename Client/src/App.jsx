@@ -62,6 +62,7 @@ function App() {
    }
    async function login(userData) {
       try {
+         console.log(userData);
          const { email, password } = userData;
          const URL = '/login';
 
