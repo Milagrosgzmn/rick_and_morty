@@ -12,12 +12,13 @@ export default function Form ({login}){
     useEffect(()=>{
         const predefinedUser = import.meta.env.VITE_USER;
         const predefinedPassword = import.meta.env.VITE_PASSWORD;
-        setUserData({
-            email:predefinedUser,
-            password: predefinedPassword
+        setUserData(prev=>{
+            return { ...prev,
+            email: predefinedUser,
+            password: predefinedPassword }; 
         })
 
-    },[])
+    },[]);
     
     function handleChange(event){
         setUserData({
