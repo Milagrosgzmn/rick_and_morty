@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Rick And Morty API
+This project uses the [Rick and Morty API](https://rickandmortyapi.com/) to retrieve information about characters from the "Rick and Morty" television series. The API provides comprehensive data on characters, locations, and more.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+
+- **Character Information**: Retrieve detailed information about characters from the "Rick and Morty" series, including their names, species, origin, and more.
+
+- **Favorite Management**: Utilize CRUD operations to add and remove characters as favorites, allowing users to keep track of their preferred characters.
+
+- **User Accounts**: Implement user account creation and login functionality to provide a personalized experience.
+
+![imagenes del proyecto](https://i.ibb.co/txc8tHV/Captura-de-pantalla-2023-10-27-162013.png)
+![home del proyecto con personajes agregados](https://i.ibb.co/9gxChNp/Captura-de-pantalla-2023-10-27-161939.png)
 
 ## Available Scripts
 
