@@ -9,6 +9,8 @@ export default function Form ({login}){
         password:''
     });
 
+    const predefinedUser = import.meta.env.VITE_USER;
+    const predefinedPassword = import.meta.env.VITE_PASSWORD;
     function handleChange(event){
         setUserData({
             ...userData,
@@ -36,6 +38,7 @@ export default function Form ({login}){
             <label htmlFor="email" className="font-semibold  text-white text-xl" >Email</label>
             <input 
             id="email"
+            value={predefinedUser}
             className="rounded-2xl px-4 py-1 my-4 text-black"
             placeholder="Ingrese su email" 
             onChange={handleChange}  
@@ -50,6 +53,7 @@ export default function Form ({login}){
             className="rounded-2xl px-4 py-1 my-4 text-black"
             placeholder="Ingrese su constraseña" 
             onChange={handleChange} 
+            value={predefinedPassword}
             name="password" 
             type="password" required/>
             <div className="h-6 my-1">
