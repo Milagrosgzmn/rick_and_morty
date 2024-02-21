@@ -2,13 +2,14 @@ import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-export default function NavBar({onSearch, addingRandom}){
+export default function NavBar({onSearch, addingRandom, handleLogOut}){
     let location = useLocation();
     
 
     return (
         <header className='w-full flex flex-col '>
-            <nav className=" pl-4 w-full flex items-center  bg-bgblue h-16">
+            <div className='flex justify-between w-full bg-bgblue'>
+            <nav className=" pl-4 flex items-center   h-16">
                 <Link className='px-4 font-semibold hover:text-mygreen' to='/home'>
                     <img src="" alt="" />
                     HOME
@@ -20,6 +21,8 @@ export default function NavBar({onSearch, addingRandom}){
                     FAVORITES
                 </Link>
             </nav>
+                <button onClick={handleLogOut} className='px-4 font-semibold hover:text-mygreen cursor-pointer'>Log out</button>
+            </div>
             {location.pathname ==='/home' && 
             <div className='
             

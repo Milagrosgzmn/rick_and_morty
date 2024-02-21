@@ -14,7 +14,7 @@ import { useState, useEffect } from 'react';
 
 import axios from 'axios';
 import { getCharacter, addRandom, deleteCharacter } from './redux/actions/characterActions';
-import { setUser } from './redux/actions/userActions';
+import { setUser, resetUser } from './redux/actions/userActions';
 
 const apiBackUrl = import.meta.env.VITE_API_BACK_URL;
 const urlApi = `${apiBackUrl}/rickandmorty`
@@ -60,9 +60,13 @@ function App() {
    function closeCard (id){
       dispatch(deleteCharacter(id))
    }
+   function handleLogOut(){
+        dispatch(resetUser());
+        setAccess(false);
+   }
+
    async function login(userData) {
       try {
-         console.log(userData);
          const { email, password } = userData;
          const URL = '/login';
 
@@ -95,7 +99,7 @@ function App() {
 
    return (
      <div>
-         { ( location.pathname !== '/' && location.pathname !== '*' ) && <NavBar addingRandom={addingRandom} onSearch={searchHandler}></NavBar>}
+         { ( location.pathname !== '/' && location.pathname !== '*' ) && <NavBar handleLogOut={handleLogOut} addingRandom={addingRandom} onSearch={searchHandler}></NavBar>}
          
          <Routes>
             <Route path='/favorites' element={<Favorites/>} />

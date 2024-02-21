@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for rickandmorty021 on 2023-10-27T10:39:22-03:00
+# fly.toml app configuration file generated for server-randm on 2024-02-20T20:00:14-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "rickandmorty021"
-primary_region = "eze"
+app = 'server-randm'
+primary_region = 'eze'
 
 [build]
 
@@ -14,4 +14,9 @@ primary_region = "eze"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1

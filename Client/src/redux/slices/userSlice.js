@@ -8,9 +8,12 @@ export const userSlice = createSlice({
     reducers:{
         setUserId : (state, action)=>{
             state.id = action.payload;
+        },
+        logOutUser:(state)=>{
+            state.id=''
         }
     }
 });
 
-export const {setUserId} = userSlice.actions;
+export const {setUserId, logOutUser} = userSlice.actions;
 export default userSlice.reducer;
